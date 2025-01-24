@@ -1,4 +1,4 @@
-""" 
+""" """ """ 
 program to illustrate the use of conditional (if else) and iteration statements
 # Conditional Statements (if-else)
 age = int(input("Enter your age: "))
@@ -30,7 +30,7 @@ while count <= 1000:
 
     #WAP to enter any charchetr if the nenter3ed character is n lower case then convert it into upper case.. and if it is in a uppeer case then convert it into lower case 
 
-char = input("Enter a character: ")
+""" char = input("Enter a character: ")
 if char.islower():
   print(char.upper())
 elif char.isupper():
@@ -57,3 +57,4 @@ fruits.sort()
 print(fruits)  # Output: ['banana', 'cherry', 'grape']
 
 
+ """ """ """

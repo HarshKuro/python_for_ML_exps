@@ -1,4 +1,4 @@
-""" a = 10
+""" """ """ """ """ a = 10
 b = 20
 c = a+b 
 print(c)
@@ -63,9 +63,9 @@ else:
     print(f"two complex roots: {real_part}+{imaginary_part}i and {real_part}-{imaginary_part}i")
 
  """
-    #write a python program to compute a polynomial equaltion given that coefficients of polynomial are stored in a list
+    #write a python program to compute a polynomial equaltion given that coefficients of polynomial are stored in a list """
 
-def calculate_cubic(coeffs,x):
+""" def calculate_cubic(coeffs,x):
   if len(coeffs) != 4:
     raise ValueError("Cubic polynomials require 4 coefficients.")
 
@@ -75,7 +75,7 @@ coefficients = [2, -3, 1, 5]
 x_value = 2
 result = calculate_cubic(coefficients, x_value)
 print(result)
-
+ """
 #incstuctions ,,, exp1 steps for installation of python --screenshots, something about python,installation steps, and screenshots on white page
 #second task in exp 1,,, all those tasks in just 1 exp polynomial and quadratic 
 #comment out each and every line of the code
