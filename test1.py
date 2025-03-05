@@ -25,3 +25,4 @@ coefficients = [2, 1]  # 2x + 1
 x_value = 3
 result = calculate_polynomial(coefficients, x_value)
 print(result)  # Output: 7
+

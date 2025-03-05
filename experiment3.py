@@ -1,11 +1,11 @@
 """ #experimtnt 1.2
 
 #write a program to demostrate this pattern 
-""" 1
+ 1
 22
 333
 4444
-5555
+5555"""
 def print_pattern(n):
     for i in range(1, n + 1):
         for j in range(i):
@@ -43,7 +43,7 @@ def reverse(n):
 num = int(input("Enter a number: "))
 
 # Call the function to reverse the number
-reverse(num) """
+reverse(num)
 
 
 #WAP using for loop it should look like 
@@ -60,14 +60,8 @@ for i in range(1, 6):
 
 #WAP to find the sum of series 1/1 square + 1/2 square + 1/3 square + 1/4 square + 1/n square
 def sum_of_series(n):
-  """Calculates the sum of the series 1/1^2 + 1/2^2 + ... + 1/n^2.
-
-  Args:
-    n: The number of terms in the series.
-
-  Returns:
-    The sum of the series.
-"""   """
+  #Calculates the sum of the series 1/1^2 + 1/2^2 + ... + 1/n^2.
+   
   total = 0
   for i in range(1, n + 1):
     total += 1 / (i ** 2)  # Calculate 1/i^2 and add it to the total
@@ -97,5 +91,3 @@ print_leap_years(1996, 2025)
 
 
     
-
- """

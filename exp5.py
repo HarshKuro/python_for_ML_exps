@@ -3,7 +3,7 @@
 #task 2 . use all the fuctions that we have discussed in our previous lectures
 
 
-""" import random
+import random
 
 def guessing_game():
     secret_number = random.randint(1, 100)
@@ -39,12 +39,12 @@ def guessing_game():
             print("Invalid input. Please enter a number.")
 
 if __name__ == "__main__":
-    guessing_game() """
+    guessing_game()
 
 
 
 
-import random 
+""" import random 
 def guessing_game():
     secret_number = random.randint(1, 100)
     guesses = []  
@@ -76,6 +76,6 @@ def guessing_game():
         except ValueError:
             print("Invalid input. Please enter a number.")
 if __name__ == "__main__":
-    guessing_game()
+    guessing_game() """
 
 

@@ -100,3 +100,8 @@ print(str.split())  # ['hello', 'world']
 # enumerate
 for index, char in enumerate(str):
     print(f"Index: {index}, Character: {char}")
+
+
+
+
+    #39
