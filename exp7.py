@@ -1,4 +1,4 @@
-#bank account class encapsulation in python . create a bank account class that uses encapsulation that manages attributes like balance . method to withdraw money , to show current balacnce, to get balance.
+""" #bank account class encapsulation in python . create a bank account class that uses encapsulation that manages attributes like balance . method to withdraw money , to show current balacnce, to get balance.
 class BankAccount:
     def __init__(self, initial_balance=0):
         if initial_balance < 0:
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     # Child class instance
     jotaro = Jotaro()
     jotaro.show_details()
-
+ """
 
 #show the concept of method overriding in python create a parent constructor and a child method that overrides the parent method.
 class parent:
@@ -95,8 +95,6 @@ class parent:
     def show(self):
         print("Parent class show method")
 class child(parent):
-    def __init__(self,name):
-        super().__init__(name)
     def show(self):
         print("Child class show method")
 #creating object of child class
@@ -106,7 +104,7 @@ c.show()
 
 # Demonstrating method overloading using JoJo characters from Parts 1 to 9.
 
-class Joestar:
+""" class Joestar:
     def __init__(self, name="Unknown Joestar", stand=None):
         self.name = name
         self.stand = stand
@@ -216,4 +214,87 @@ if __name__ == "__main__":
 
     for jojo in jojos:
         jojo.show_details()
-        print("\n")
+        print("\n") """
+
+# --- BankAccount Class demonstrating Encapsulation ---
+
+class BankAccount:
+    """
+    Represents a bank account with encapsulated balance.
+    """
+    def __init__(self, initial_balance=0):
+        """
+        Initializes the bank account.
+        Ensures the initial balance is not negative.
+        """
+        # Encapsulated attribute: _balance is intended for internal use.
+        if initial_balance >= 0:
+            self._balance = initial_balance
+        else:
+            print("Initial balance cannot be negative. Setting balance to 0.")
+            self._balance = 0
+
+    def deposit(self, amount):
+        """
+        Deposits a positive amount into the account.
+        """
+        # Method to modify the private balance safely
+        if amount > 0:
+            self._balance += amount
+            print(f"Successfully deposited: ${amount:.2f}")
+        else:
+            print("Deposit amount must be positive.")
+
+    def withdraw(self, amount):
+        """
+        Withdraws a positive amount from the account if funds are sufficient.
+        """
+        # Method controls withdrawal logic, checking funds
+        if amount <= 0:
+            print("Withdrawal amount must be positive.")
+        elif amount > self._balance:
+            print("Insufficient funds.")
+        else:
+            self._balance -= amount
+            print(f"Successfully withdrew: ${amount:.2f}")
+
+    def get_balance(self):
+        """
+        Returns the current account balance.
+        Provides controlled read access to the balance.
+        """
+        # Getter method to safely access the balance
+        return self._balance
+
+    def show_balance(self):
+        """
+        Displays the current account balance to the user.
+        """
+        # User-friendly method to display the balance
+        print(f"Current balance: ${self._balance:.2f}")
+
+# --- Example Usage ---
+# Create an account
+my_account = BankAccount(1000)
+
+# Show initial balance
+my_account.show_balance() # Output: Current balance: $1000.00
+
+# Deposit money
+my_account.deposit(500)   # Output: Successfully deposited: $500.00
+my_account.show_balance() # Output: Current balance: $1500.00
+
+# Withdraw money
+my_account.withdraw(200)  # Output: Successfully withdrew: $200.00
+my_account.show_balance() # Output: Current balance: $1300.00
+
+# Attempt invalid withdrawal
+my_account.withdraw(2000) # Output: Insufficient funds.
+my_account.withdraw(-50)  # Output: Withdrawal amount must be positive.
+
+# Get balance using the getter method
+current_bal = my_account.get_balance()
+print(f"Balance retrieved via get_balance(): ${current_bal:.2f}") # Output: Balance retrieved via get_balance(): $1300.00
+
+# Attempt direct access (discouraged due to the underscore convention)
+# print(my_account._balance) # Works, but violates the convention of encapsulation
