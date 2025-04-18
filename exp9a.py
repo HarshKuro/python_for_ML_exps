@@ -45,4 +45,3 @@ read_txt.to_csv(csv_file_path, index=False)
 
 print(f"File refined (skipped first 2 rows) and converted successfully to {csv_file_path}")
 
-
